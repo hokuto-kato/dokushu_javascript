@@ -10,8 +10,10 @@ const obj = {
 let sum = 0 //sumに値を加算していく
 
 for (let objElement of Object.entries(obj)) {
-	if (objElement[0] !== "skip" && typeof objElement[1] === "number"){
-		sum += objElement[1]
+	const key = objElement[0]
+	const value = objElement[1]
+	if (key !== "skip" && typeof value === "number"){
+		sum += value
 	}
 }
 console.log(sum)
