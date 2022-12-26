@@ -1,15 +1,12 @@
-// 1
-const fn1 = (num1, num2) => num1 + num2
-// 2
-const fn2 = num => num * 2
-
-// 3
-const fn3 = () => console.log('HelloWorld')
-
-// 4
-const fn4 = (name) => {
-	console.log('HelloWorld')
-	console.log(`Hello${name}!`)
-}
-// 5
-const fn5 = () => ({ name: '独習太郎' })
+const delayMessageFactory = (func, delay) =>
+	message => {
+		setTimeout(() => {
+			func(message)
+		}, delay)
+	}
+const dialog = delayMessageFactory(alert, 2000)
+dialog('こんにちは')
+// ２秒後にアラートで「こんにちは」と表示されます。
+const log = delayMessageFactory(console.log, 1000)
+log('こんばんは')
+// １秒後にコンソールに「こんばんは」と表示されます。
