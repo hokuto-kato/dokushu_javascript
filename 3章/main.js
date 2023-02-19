@@ -1,6 +1,5 @@
-let a = 0 // 0
-console.log(a)
-let b = 0 // 0
-console.log(b)
-a = 1 + (b = 10) // 11
-console.log(a, b)
+console.log((12 ** 2) % 5)
+//2
+console.log((12n ** 2n) % 5n)
+//3
+console.log(Number('あ')) // 文字列を数値に型変換しようとしたときなど
